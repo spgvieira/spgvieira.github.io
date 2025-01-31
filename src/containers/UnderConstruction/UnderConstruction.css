@@ -1,0 +1,12 @@
+.under-construction {
+    display: flex;
+    background-color: #313c52;
+    color: white; 
+} 
+
+body {
+    background-image: url("../../images/UnderConstruction.png");
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
