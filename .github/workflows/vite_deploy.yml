@@ -57,9 +57,10 @@ jobs:
       - name: Static HTML export with Vite
         run: ${{ steps.detect-package-manager.outputs.runner }} vite build
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          # Upload dist folder
+          path: './dist'
 
   # Deployment job
   deploy:
@@ -71,4 +72,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
