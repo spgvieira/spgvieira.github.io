@@ -21,12 +21,12 @@ const UnderConstruction: FC = memo(() => {
 	const imageStyle = {
         position: "absolute",
         width: "55%", // Adjust as needed to fit inside the div
-		transform: "rotate(-35deg)",
+		transform: "rotate(-25deg)",
     } as const;
 	return (
         <div style={myStyle}>
-			<img src={underConstructionImg} style={{ ...imageStyle, top: "25%", left: "-5%"}} />
-			<img src={underConstructionImg} style={{ ...imageStyle, bottom: "25%", right: "-5%"}}/>
+			<img src={underConstructionImg} style={{ ...imageStyle, top: "18%", left: "-3%"}} />
+			<img src={underConstructionImg} style={{ ...imageStyle, bottom: "18%", right: "-3%"}}/>
 			<div style={text}>
 				<h1> MUCH LIKE ME, THIS WEBSITE IS A WORK IN PROGRESS </h1>
 				<p> IMPROVING STEP BY STEP </p>
