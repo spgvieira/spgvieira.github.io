@@ -1,30 +1,36 @@
 import { FC, memo } from "react";
-import './UnderConstruction.css'
 import underConstructionImg from '../../images/UnderConstruction.png'
 
 const UnderConstruction: FC = memo(() => {
 	const myStyle = {
-        backgroundColor: '#FFFBF0',
-        color: '#2D4160',
-		textAlign: 'center',
-		fontSize: '400%',
-		fontFamily: 'sans-serif',
-		position: 'fixed',
+		position: "relative",
 		width: '100%',
-		height: '100%',
+		overflow: 'hidden',
+		borderRadius: '10px',
+		display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
     } as const
-	const imgStyle = {
-		margin: "5%",
-		marginBottom: "5%",
-		marginLeft: "0",
-		width: "100%"
-	}
+	const text = {
+		position: 'relative',
+		fontFamily: 'sans-serif',
+		color: '#FFFBF0',
+		textAlign: 'center',
+		padding: '20% 15% 15% 15%',
+	} as const
+	const imageStyle = {
+        position: "absolute",
+        width: "55%", // Adjust as needed to fit inside the div
+		transform: "rotate(-35deg)",
+    } as const;
 	return (
         <div style={myStyle}>
-			<img src={underConstructionImg} style={imgStyle}/>
-			<header> MUCH LIKE ME, THIS WEBSITE IS A WORK IN PROGRESS </header>
-			<body> IMPROVING STEP BY STEP </body>
-			<img src={underConstructionImg} style={imgStyle}/>
+			<img src={underConstructionImg} style={{ ...imageStyle, top: "25%", left: "-5%"}} />
+			<img src={underConstructionImg} style={{ ...imageStyle, bottom: "25%", right: "-5%"}}/>
+			<div style={text}>
+				<h1> MUCH LIKE ME, THIS WEBSITE IS A WORK IN PROGRESS </h1>
+				<p> IMPROVING STEP BY STEP </p>
+			</div>
 		</div>
 	);
 });

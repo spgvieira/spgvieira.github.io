@@ -1,45 +1,30 @@
-import styled from "styled-components";
-import { darkTheme } from "../../themes";
 
-const SectionStyled = styled("section")`
-	background-color: ${darkTheme.colors.greyDark};
-
-	@media only screen and (max-width: ${darkTheme.breakpoint.md}) {
-		height: 600px;
+import bannerImg from "../../images/banner.png"
+import dudeImg from "../../images/dude.png"
+import UnderConstruction from "../UnderConstruction/UnderConstruction"
+function Landing() {
+	const style = {
+        color: '#FFFBF0',
+		fontSize: '2em',
+		padding: '0.5% 1%',
+		fontFamily: 'sans-serif',
+    } as const
+	const bannerStyle = {
+		width: '100%',
 	}
-	@media only screen and (max-width: ${darkTheme.breakpoint.sm}) {
-		height: 500px;
-	}
-	h1,
-	h2 {
-		text-transform: uppercase;
-		color: white;
-		font-family: ${darkTheme.fontFamily.main};
-		font-weight: 400;
-		text-align: center;
-		margin: 0;
-	}
-`;
-
-const Wrapper = styled("div")`
-	margin: auto;
-	height: 100%;
-	max-height: 750px;
-	max-width: 1920px;
-	position: relative;
-	display: flex;
-	justify-content: flex-end;
-	flex-direction: column;
-
-	@media only screen and (min-width: ${darkTheme.breakpoint.lg}) {
-		padding: 50px 0 0;
-	}
-`;
-
-export default function Landing() {
+	const dudeStyle = {
+		float: 'right',
+		width: '18%',
+	} as const
 	return (
-        <SectionStyled>
-            <Wrapper></Wrapper>
-        </SectionStyled>
+        <div style={style}>
+			<img src={bannerImg} style={bannerStyle}/>
+			<h1>Welcome to Sara’s Hyggelig Internet Corner 
+			<img src={dudeImg} style={dudeStyle}/>
+			</h1>
+			<UnderConstruction/>
+		</div>
 	);
 }
+
+export default Landing;

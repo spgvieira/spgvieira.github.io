@@ -9,12 +9,9 @@ import cvPDF from "../../assets/CV_SARA_VIEIRA.pdf"
 const Header: FC = memo(() => {
     const style = {
         backgroundColor: '#FFFBF0',
-        color: '#2D4160',
-        margin: '0.5%',
-        padding: '1%',
-        font: '',
+        margin: '0.5% 1%',
+        padding: '1%' ,
         borderRadius: '10px',
-        position: 'relative',
 	    display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
@@ -30,26 +27,28 @@ const Header: FC = memo(() => {
         right: 0,
     } as const
     return (
-        <div style={style}>
-            <div style={leftCorner}>
-                <img src={logoImg}/>
-            </div>
-            <div style={rightCorner}>
-            <SocialMediaButton
-							href={cvPDF}
-							icon = {DescriptionIcon}
-							label="CV"
-						/>
+        <div style={{position: 'sticky', top: '1%', zIndex: '2'}}>
+            <div style={style}>
+                <div style={leftCorner}>
+                    <img src={logoImg}/>
+                </div>
+                <div style={rightCorner}>
                 <SocialMediaButton
-							href="https://github.com/spgvieira"
-							icon = {GitHubIcon}
-							label="Github"
-						/>
-                <SocialMediaButton
-							href="https://www.linkedin.com/in/sarapvieira/"
-							icon = {LinkedInIcon}
-							label="LinkedIn"
-						/>
+                                href={cvPDF}
+                                icon = {DescriptionIcon}
+                                label="CV"
+                            />
+                    <SocialMediaButton
+                                href="https://github.com/spgvieira"
+                                icon = {GitHubIcon}
+                                label="Github"
+                            />
+                    <SocialMediaButton
+                                href="https://www.linkedin.com/in/sarapvieira/"
+                                icon = {LinkedInIcon}
+                                label="LinkedIn"
+                            />
+                </div>
             </div>
         </div>
     )
