@@ -6,7 +6,6 @@ const UnderConstruction: FC = memo(() => {
 		position: "relative",
 		width: '100%',
 		overflow: 'hidden',
-		borderRadius: '10px',
 		display: "flex",
         alignItems: "center",
         justifyContent: "center",

@@ -1,4 +1,4 @@
-import { colors, SvgIcon, SvgIconProps } from "@material-ui/core";
+import { SvgIcon, SvgIconProps } from "@material-ui/core";
 
 type SocialMediaButtonProps = {
 	href: string;

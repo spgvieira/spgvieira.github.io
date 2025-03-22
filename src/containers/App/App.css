@@ -1,3 +1,14 @@
+@font-face {
+    font-family: "Lovelo";   /*Can be any text*/
+    src: url("../../fonts/Lovelo-Black.otf") format("opentype");
+}
+
+
+@font-face {
+    font-family: "Aloja";   /*Can be any text*/
+    src: url("../../fonts/Aloja-Extended.woff") format("woff");
+}
+  
 html{
     background-color: #2D4160;
 }
